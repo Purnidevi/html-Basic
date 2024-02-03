@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+    <script>
+        function submitdata(){
+            let name = document.getElementById('name').value;
+            let email =document.getElementById('email').value;
+            
+            const payload = {
+                name: name,
+                emailAddress:email
+
+            }
+            alert(JSON.stringify(payload));
+        }
+        let m="Message: My name and email ";
+        document.getElementById('message').innerHTML =m;
+
+
+
+    </script>
+
+</head>
+<body>
+    <form >
+        <label for="name">Name</label>
+        <input type="text" name="" id="name" placeholder="name"><br>
+
+        <label for="email">Email</label>
+        <input type="text" name="" id="email" placeholder="email"><br>
+        <button type="button" onclick="submitdata()">Submit</button>
+    </form>
+    <div id = "message"></div>
+    
+    
+</body>
+</html>
